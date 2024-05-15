@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | LifeFit</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Enlaza Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Enlaza Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="login" id="contLogin">
+        <!-- Contenido del formulario de inicio de sesión -->
+        <h1 class="titulo_login">LIFEFIT</h1>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Login</h3>
+                            <form id="formularioLogin">
+                                <div class="form-group">
+                                    <label for="name">Usuario</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Usuario">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" name="password" id="password"
+                                        placeholder="Password">
+                                </div>
+                                <div class="form-group" id="contenedor-boton">
+                                    <button type="submit" class="btn btn-dark">Login </button>
+                                </div>
+                            </form>
+                            <div class="registrarse">
+                                <p class="crear_cuenta_mensaje">Don't you have an account?</p>
+                                <a id="crear_cuenta" class="btn btn-primary">Create account</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cuerpo" id="cuerpo">
+        <header class="header">
+            <!-- Contenido del encabezado -->
+            <div class="izquierda">
+                <div class="letra">
+                    <h1 class="titulo">LIFEFIT</h1>
+                    <p class="eslogan">Your training app</p>
+                </div>
+                <nav class="menu_header">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Muscles</a></li>
+                        <li><a href="rutinas.html">My routines</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <img src="../img/LIFEFIT-SIN-FONDO.png" alt="logo lifefit">
+        </header>
+
+        <nav class="menu">
+            <!-- Contenido del menú de navegación -->
+            <ul>
+                <li><a href="#" id="71">Pectorals</a></li>
+                <li><a href="#" id="77">Back</a></li>
+                <li><a href="#" id="72">Quadriceps</a></li>
+                <li><a href="#" id="76">Triceps</a></li>
+                <li><a href="#" id="62">Biceps</a></li>
+            </ul>
+        </nav>
+
+        <main class="main">
+            <div class="ejercicios" id="ejercicios">
+                <!-- Contenido de los ejercicios -->
+            </div>
+        </main>
+
+        <footer class="footer">
+
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../script.js"></script>
+</body>
+
+</html>
