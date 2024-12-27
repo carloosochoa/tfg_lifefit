@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routines | LifeFit</title>
+    <link rel="stylesheet" href="../style/rutinas_style.css">
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <div class="cuerpo" id="cuerpo">
+        <header class="header">
+            <div class="izquierda">
+                <div class="letra">
+                    <h1 class="titulo">LIFEFIT</h1>
+                    <p class="eslogan">Your training app</p>
+                </div>
+                <nav class="menu_header">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="rutinas.html">My routines</a></li>
+                        <li><a class="btn btn-dark" id="close_session">Close Session</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <img src="../img/LIFEFIT-SIN-FONDO.png" alt="logo lifefit">
+        </header>
+        <main class="main" id="main">
+            <div class="contenedor_boton" id="contenedor_boton">
+                <input type="hidden" id="1">
+                <a id="abrir_modal" class="btn btn-primary">Create routine</a>
+            </div>
+            <p class="sinRutinas" id="parrafo_sinRutinas">
+                You do not have any routines created <span
+                    class='material-symbols-outlined'>sentiment_dissatisfied</span> <span
+                    class='material-symbols-outlined'>fitness_center</span>
+            </p>
+            <div class="contenedor_rutinas" id="contenedor_rutinas">
+
+            </div>
+        </main>
+        <footer class="footer"></footer>
+    </div>
+    <div class="modal_rutinas" id="modal">
+        <div class="titulo_modal">
+            <p>Create a new routine</p>
+            <img src="../img/LIFEFIT-SIN-FONDO.png" alt="logo" />
+        </div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <input type="text" name="nombreEjercicios" id="nombreEjercicios"
+                                placeholder="Routine Name..." class="form-control">
+                            <form id="formulario_rutina">
+                                <div class="ejercicios" id="inputsEjercicios">
+                                </div>
+                                <a class="btn btn-light" id="agregarEjercicio">Add exercise</a>
+                                <a class="btn btn-primary" id="crear_rutina">Create</a>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ventana_borrosa" id="ventana_borrosa"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../rutinas_script.js"></script>
+
+</body>
+
+</html>
