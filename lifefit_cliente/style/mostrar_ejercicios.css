@@ -27,9 +27,6 @@ header {
     background-color: black;
     width: 100%;
     color: white;
-}
-
-header {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
@@ -63,12 +60,9 @@ header img {
 }
 
 .titulo,
-.eslogan,
-#crear_rutina,
-.titulo_modal {
+.eslogan {
     font-family: 'primetime';
 }
-
 .menu_header {
     display: flex;
     align-items: end;
@@ -77,24 +71,18 @@ header img {
     font-size: large;
     font-weight: bold;
 }
-
-.subtitulo {
-    background-color: black;
-    color: white;
-    padding: 20px;
-    font-size: 100px;
-}
-
 .menu_header ul {
     list-style: none;
     text-align: center;
 }
 
+.menu ul li,
 .menu_header ul li {
     display: inline-block;
     margin-right: 20px;
 }
 
+.menu ul li:last-child,
 .menu_header ul li:last-child {
     margin-right: 0;
 }
@@ -102,6 +90,20 @@ header img {
 .menu_header ul li a {
     color: white;
     text-decoration: none;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu ul li a:hover {
+    transform: translateY(3px);
+    background-color: #555;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .menu_header ul li,
@@ -125,53 +127,16 @@ header img {
 }
 
 .menu_header ul li a:hover {
+
     font-size: 105%;
 }
-
-main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5px;
-    background-color: #f9f9f9;
-}
-
-.contenedor_flecha {
-    width: 100%;
-    padding-left: 15px;
-}
-
-.material-symbols-outlined {
-    font-size: 40px !important;
-}
-
-
-.enlace_flecha {
-    text-decoration: none;
-    color: black;
-}
-
-.enlace_flecha:hover {
-    color: #333;
-}
-
-.rutina {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.tarjeta {
+.mostrar_ejercicio {
     display: flex;
     background-color: white;
     flex-direction: column;
     border: 1px solid #ccc;
     border-radius: 15px 15px;
-    width: 50%;
+    width: 80%;
     align-items: center;
     gap: 10px;
     padding: 10px;
@@ -180,7 +145,7 @@ main {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.tarjeta .contenedorContenido {
+.mostrar_ejercicio .contenedorContenido {
     padding-top: 10px;
     height: 35%;
 }
@@ -196,80 +161,16 @@ main {
     display: block;
 }
 
-.form-group {
-    display: flex;
-    padding-bottom: 10px;
-}
-
 .equipamientoEjercicio,
-.nombreMusculo,
-.seriesEjercicio,
-.repeticionesEjercicio {
+.nombreMusculo {
     border-top: 1px solid #ccc;
     padding-top: 5px;
     font-size: 15px;
 }
-
-table {
-    width: 85%;
-    margin: 15px 0 15px 0;
-}
-
-thead {
-    background-color: #333;
-    color: white;
-    font-weight: bold;
-    font-size: 15px;
-    padding: 10px;
-}
-
-td {
-    padding: 10px;
-    text-align: center;
-    width: 25%;
-}
-
-table,
-tr,
-td {
-    border: 1px solid #ccc;
-    border-collapse: collapse;
-}
-
-input {
-    text-align: center;
-}
-
-@media only screen and (min-width: 400px) and (max-width: 600px) {
-    body{
-        overflow-x: hidden;
-    }
-    header {
-        display: flex !important;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 10%;
-        padding: 15px;
-    }
-    header>img{
-        display: none;
-    }
-    .main,.rutina{
-        width: 100%;
-    }
-    .rutina{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-    }
-    .tarjeta{
-        width: 90%;
-    }
-    .tarjeta table{
-        width: 70%;
-        overflow-x: auto;
-    }
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
 }

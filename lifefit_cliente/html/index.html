@@ -4,21 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | LifeFit</title>
+    <title>LIFEFIT</title>
     <link rel="stylesheet" href="../style/style.css">
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- Enlaza Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Enlaza Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
+
     <div class="login" id="contLogin">
-        <!-- Contenido del formulario de inicio de sesión -->
         <h1 class="titulo_login">LIFEFIT</h1>
         <div class="container">
             <div class="row justify-content-center">
@@ -28,8 +22,8 @@
                             <h3>Login</h3>
                             <form id="formularioLogin">
                                 <div class="form-group">
-                                    <label for="name">Usuario</label>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Usuario">
+                                    <label for="name">User</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="User">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
@@ -37,7 +31,7 @@
                                         placeholder="Password">
                                 </div>
                                 <div class="form-group" id="contenedor-boton">
-                                    <button type="submit" class="btn btn-dark">Login </button>
+                                    <a class="btn btn-dark" id="login">Login </a>
                                 </div>
                             </form>
                             <div class="registrarse">
@@ -49,48 +43,38 @@
                 </div>
             </div>
         </div>
+        <div id="error">
+            <p></p>
+        </div>
     </div>
-
-    <div class="cuerpo" id="cuerpo">
-        <header class="header">
-            <!-- Contenido del encabezado -->
+    <div id="modal" class="modal_registro">
+        <div class="header">
             <div class="izquierda">
                 <div class="letra">
                     <h1 class="titulo">LIFEFIT</h1>
                     <p class="eslogan">Your training app</p>
                 </div>
-                <nav class="menu_header">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Muscles</a></li>
-                        <li><a href="rutinas.html">My routines</a></li>
-                    </ul>
-                </nav>
+                <div class="titulo">
+                    <h2>NEW USER!!</h2>
+                </div>
             </div>
             <img src="../img/LIFEFIT-SIN-FONDO.png" alt="logo lifefit">
-        </header>
-
-        <nav class="menu">
-            <!-- Contenido del menú de navegación -->
-            <ul>
-                <li><a href="#" id="71">Pectorals</a></li>
-                <li><a href="#" id="77">Back</a></li>
-                <li><a href="#" id="72">Quadriceps</a></li>
-                <li><a href="#" id="76">Triceps</a></li>
-                <li><a href="#" id="62">Biceps</a></li>
-            </ul>
-        </nav>
-
-        <main class="main">
-            <div class="ejercicios" id="ejercicios">
-                <!-- Contenido de los ejercicios -->
+        </div>
+        <form id="formularioRegistro">
+            <div class="form-group" id="usuario_registro">
+                <label for="name">User</label>
+                <input type="text" class="form-control" id="user" name="name" placeholder="User">
             </div>
-        </main>
-
-        <footer class="footer">
-
-        </footer>
+            <div class="form-group" id="password_registro">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="nueva_password" placeholder="Password">
+            </div>
+            <div class="form-group" id="boton_registro">
+                <a class="btn btn-dark" id="registrar">Create account</a>
+            </div>
+        </form>
     </div>
+    <div class="ventana_borrosa" id="ventana_borrosa"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

@@ -1,18 +1,20 @@
 @font-face {
     font-family: 'primetime';
     src: url('../fonts/primetime.ttf') format('truetype');
-  }
+}
 
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
 
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
-body{
+
+body {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
@@ -21,43 +23,53 @@ body{
     gap: 50px;
 }
 
-header, footer{
+header {
     background-color: black;
     width: 100%;
     color: white;
 }
-header{
+
+header {
     display: flex !important;
     justify-content: space-between;
     align-items: center;
     height: 10%;
     padding: 15px;
 }
-header img{
+
+header img {
     height: 100px;
 
 }
-header img{
+
+header img {
     padding-right: 25px;
 }
-.izquierda{
+
+.izquierda {
     display: flex;
 }
-.letra{
+
+.letra {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-top: 15px;
 }
-.eslogan{
+
+.eslogan {
     font-size: smaller;
 }
 
-.titulo, .eslogan, #crear_rutina, .titulo_modal{
+.titulo,
+.eslogan,
+#crear_rutina,
+.titulo_modal {
     font-family: 'primetime';
 }
-.menu_header{
+
+.menu_header {
     display: flex;
     align-items: end;
     padding-left: 10px;
@@ -65,29 +77,35 @@ header img{
     font-size: large;
     font-weight: bold;
 }
-.subtitulo{
+
+.subtitulo {
     background-color: black;
     color: white;
     padding: 20px;
     font-size: 100px;
 }
-.menu_header ul{
+
+.menu_header ul {
     list-style: none;
     text-align: center;
 }
-.menu_header ul li{
-  display: inline-block;
-  margin-right: 20px;
+
+.menu_header ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
+
 .menu_header ul li:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
-.menu_header ul li a{
+
+.menu_header ul li a {
     color: white;
     text-decoration: none;
 }
 
-.menu_header ul li, .menu_header ul li a{
+.menu_header ul li,
+.menu_header ul li a {
     position: relative;
 }
 
@@ -95,20 +113,22 @@ header img{
     content: "";
     position: absolute;
     left: 0;
-    bottom: -3px; 
+    bottom: -3px;
     width: 0;
-    height: 2px; 
-    background-color: white; 
+    height: 2px;
+    background-color: white;
     transition: width 0.3s;
 }
+
 .menu_header ul li a:hover::after {
     width: 100%;
 }
-.menu_header ul li a:hover{
+
+.menu_header ul li a:hover {
     font-size: 105%;
 }
 
-main{
+main {
     display: flex !important;
     flex-direction: column;
     align-items: center;
@@ -116,7 +136,8 @@ main{
     width: 100%;
     padding: 20px;
 }
-.ventana_borrosa{
+
+.ventana_borrosa {
     display: none;
     background-color: rgba(0, 0, 0, 0.55);
     width: 100%;
@@ -125,51 +146,56 @@ main{
     top: 0;
     left: 0;
 }
-.modal_rutinas{
+
+.modal_rutinas {
     display: none;
     position: fixed;
     overflow-y: auto;
     top: 5%;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     z-index: 2;
     width: 80%;
     height: 80%;
     margin: auto;
-    /* display: flex; 
-    justify-content: center;
-    align-items: center; */
+
     background-color: white;
     border: 3px solid #ccc;
     border-radius: 10px;
 }
-.modal_rutinas img{
+
+.modal_rutinas img {
     width: 50px;
     height: 50px;
 }
-.titulo_modal{
+
+.titulo_modal {
     width: 100%;
     display: flex;
     align-items: end;
     justify-content: space-around;
     color: white;
     background-color: black;
+    border-radius: 0 0 10px 10px;
     padding-bottom: 10px;
+    padding: 10px 0 10px;
+    margin-bottom: 10px;
 
 }
-.form-control{
+
+.form-control {
     margin-bottom: 10px;
 }
 
-#inputsEjercicios{
+#inputsEjercicios {
     margin-bottom: 10px;
 }
 
-.sinRutinas{
+.sinRutinas {
     font-family: 'Primetime';
 }
 
-.contenedor_boton{
+.contenedor_boton {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,7 +203,7 @@ main{
     gap: 15px;
 }
 
-.contenedor_rutinas{
+.contenedor_rutinas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -185,30 +211,127 @@ main{
     width: 90%;
 }
 
-.mensaje_rutinas{
+.mensaje_rutinas {
     text-decoration: underline;
 }
-.tarjeta{
-    margin-top: 15px;
+
+.tarjeta {
+    margin-top: 20px;
     display: flex;
-    background-color: white;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 15px 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px; 
     width: 40%;
-    padding: 10px;
-    justify-content: space-around;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    font-family: 'Helvetica', 'Arial', sans-serif; 
+    max-width: 400px; 
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.nombreRutina, .mensaje_rutinas{
+.nombreRutina {
+    grid-area: fila1;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
 }
 
-/* 
-3/4 sit-up
-45° side bend
-air bike
-all fours squad stretch */
+.mensaje_rutinas {
+    grid-area: fila2;
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#contenedor_abrir_rutina {
+    grid-area: fila3;
+    display: flex;
+    justify-content: center; 
+    width: 100%;
+    margin: 15px 0 15px;
+}
+
+#abrir_rutina {
+    padding: 10px 20px;
+    background-color: #444;
+    color: #fff; 
+    border-radius: 4px; 
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 14px; 
+    width: 48%;
+}
+
+#abrir_rutina:hover {
+    background-color: #333; 
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.borrar_rutina {
+    display: inline-block; 
+    width: 48%;
+}
+
+.borrar_rutina a {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px; 
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 14px;
+}
+
+.borrar_rutina a:hover {
+    background-color: #c0392b; 
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+.material-symbols-outlined {
+    width: 15px;
+    vertical-align: middle;
+}
+
+#inputRepeticiones {
+    margin-bottom: 40px;
+}
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+    header {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
+        padding: 15px;
+    }
+    header>img{
+        display: none;
+    }
+    .contenedor_rutinas{
+        width: 95%;
+
+    }
+    .tarjeta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .contenedor_abrir_rutina, .borrar_rutina{
+        width: 80%;
+    }
+    
+
+
+}
